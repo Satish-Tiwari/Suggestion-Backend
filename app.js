@@ -17,7 +17,9 @@ const SuggModel = require("./model/suggschema");
 const dbconnect = require("./database/dbconnect");
 dbconnect();
 
-
+app.get("/", async (req,res)=>{
+    return res.json({message:"running"});
+});
 
 // create new user in DB and post method
 app.post("/", async (req, res,next) => {
