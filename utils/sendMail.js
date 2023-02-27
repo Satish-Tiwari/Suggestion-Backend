@@ -3,6 +3,8 @@ const nodemailer = require("nodemailer");
 // set up a transporter object to send the email using your email service
 const transporter = nodemailer.createTransport({
     service: 'gmail',
+    port: process.env.MAILPORT,
+    secure: true,
     auth: {
         user: process.env.user,
         pass: process.env.pass
